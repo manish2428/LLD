@@ -28,4 +28,20 @@ logging.info("Login attempt", extra={"user": "john", "token": "***"})
 
 
 # This ensures that sensitive fields like token are excluded from the logs.
-#
+
+
+
+
+#################EXAMPLE FOR STRUCTURED LOGGING################
+# import logging
+# from fastapi import Request
+
+# logger = logging.getLogger("uvicorn")
+
+# @app.middleware("http")
+# async def log_requests(request: Request, call_next):
+#     request_id = str(uuid.uuid4())
+#     logger.info(f"{request_id} - Started {request.method} {request.url}")
+#     response = await call_next(request)
+#     logger.info(f"{request_id} - Completed with {response.status_code}")
+#     return response
