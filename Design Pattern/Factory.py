@@ -40,7 +40,7 @@ from abc import ABC,abstractmethod
 
 
 class Pay(ABC):
-    @staticmethod
+    @abstractmethod
     def processPayment(self, amount):
         pass
 

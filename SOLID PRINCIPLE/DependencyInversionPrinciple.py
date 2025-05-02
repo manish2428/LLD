@@ -20,7 +20,7 @@
 
 
 from abc import ABC, abstractmethod
-class Database:
+class Database(ABC):
     @abstractmethod
     def connect(self):
         pass
