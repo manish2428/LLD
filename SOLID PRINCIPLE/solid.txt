@@ -1,3 +1,8 @@
 what is solid?
 ->5 GOLDEN RULES TO WRITE GOOD OBJECT ORIENTED CODE.
+-
+-
+-
+-
+-
 
