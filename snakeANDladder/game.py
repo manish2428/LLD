@@ -1,7 +1,6 @@
 from board import Board 
 from player import Players as Player
-from dice import Dice
-import time
+from dice import Dice 
 
 class Game:
     def __init__(self, players):
@@ -15,7 +14,6 @@ class Game:
             player = self.players[self.players_turn]
             roll_dice = self.dice.roll_dice()
             new_position = player.get_position() + roll_dice
-            time.sleep(5)
             if new_position < self.board.get_board_size():
                 player.set_position(new_position)
                 print(f"{player.get_name()} rolled a dice and moved to new position {player.get_position()}")
