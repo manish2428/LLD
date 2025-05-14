@@ -54,5 +54,14 @@ class TicTacToe(Board):
     def set_symbol(self, row, col, symbol):
         self.board[row][col] = symbol
 
+    def game_status(self):
+        if self.check_win_status():
+            return "WIN"
+        
+        if self.is_board_full():
+            return "DRAW"
+        
+        return "CONTINUE"
+
 
     
